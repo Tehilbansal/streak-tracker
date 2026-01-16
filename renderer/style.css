@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  padding: 20px;
+  border-bottom: 1px solid #1e293b;
+}
+
+.subtitle {
+  font-size: 13px;
+  opacity: 0.6;
+  margin-bottom: 10px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.toolbar button {
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #e5e7eb;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+#searchInput {
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+}
+
+/* Habit list */
+.habit-list {
+  padding: 20px;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  flex: 1;
+}
+
+/* Habit card */
+.habit {
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-left: 6px solid var(--accent);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.drag-handle {
+  cursor: grab;
+  opacity: 0.6;
+  margin-bottom: 6px;
+}
+
+.drag-handle:active {
+  cursor: grabbing;
+}
+
+.habit-name {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.streak {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-top: 4px;
+}
+
+/* Buttons */
+.habit-actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.done-btn {
+  background: #22c55e;
+  color: #020617;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.icon-btn {
+  background: #1e293b;
+  color: #e5e7eb;
+  border-radius: 8px;
+}
+
+/* Calendar / Stats */
+.habit-extra {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #1e293b;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.calendar-grid div {
+  text-align: center;
+  padding: 4px;
+  border-radius: 6px;
+}
+
+/* Add habit */
+.add-habit {
+  display: flex;
+  gap: 10px;
+  padding: 16px;
+  border-top: 1px solid #1e293b;
+}
+
+.add-habit input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+.add-habit button {
+  background: #22c55e;
+  color: #020617;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-weight: bold;
+}
+
+/* Undo bar */
+#undoBar {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1e293b;
+  padding: 10px 16px;
+  border-radius: 10px;
+  gap: 12px;
+}

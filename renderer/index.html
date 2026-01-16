@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Streak Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>🔥 Streak Tracker</h1>
+      <p class="subtitle">Build habits. One day at a time.</p>
+
+      <div class="toolbar">
+        <button id="sortToggleBtn">Sort by Streak</button>
+        <button id="exportJsonBtn">Export JSON</button>
+        <button id="exportCsvBtn">Export CSV</button>
+      </div>
+
+      <input
+        id="searchInput"
+        placeholder="Search habits..."
+      />
+    </header>
+
+    <main id="habitList" class="habit-list"></main>
+
+    <footer class="add-habit">
+      <input id="habitInput" placeholder="New habit name" />
+      <button id="addHabitBtn">Add Habit</button>
+    </footer>
+  </div>
+
+  <!-- Undo Delete -->
+  <div id="undoBar">
+    <span>Habit deleted</span>
+    <button onclick="undoDelete()">Undo</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
